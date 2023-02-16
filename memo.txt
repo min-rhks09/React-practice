@@ -1,0 +1,25 @@
+#2.1 
+- 버튼 클릭 카운트 페이지로 vailla js 와 react 비교해보기
+- html, js
+<body style="text-align: center;">
+    <!-- html, js 로 click counter 만들기-->
+    <h1>Button click counter for vanilla js</h1>
+    <hr><br>
+    <span>total clicks: 0</span>
+    <br><br>
+    <button id="btn">click here!</button>
+</body>
+    <script>
+        let counter = 0;
+        const span = document.querySelector("span");
+        const button =document.querySelector("#btn");
+        function handleClick(){
+            console.log("btn clicked");
+            counter = counter +1;
+            span.innerText = `total clicks: ${counter}`
+        };
+        button.addEventListener("click",handleClick);
+    </script>
+
+#2.2 
+- react (실제 react에서는 잘사용하지 않는 방식)

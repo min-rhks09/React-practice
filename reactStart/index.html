@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>click counter</title>
+    </head>
+    <body style="text-align: center; font-size: 50px; margin-top: 5%;">
+        <div id="root">
+
+        </div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>    
+    <script>
+        //id = "root"인 div 태그안에 span 생성
+        const root = document.getElementById("root");
+        const span = React.createElement(
+            "span", //span 태그생성
+            {id: "span-sample",style:{color:"red"}}, //span에 id 및 style 부여 
+            "THIS IS A SAMPLE" //태그 내용 입력
+            ); 
+        ReactDOM.render(span, root);
+    </script>
+</html>

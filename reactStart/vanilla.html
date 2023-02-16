@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click counter</title>
+</head>
+<body style="text-align: center;">
+    <!-- html, js 로 click counter 만들기-->
+    <h1>Button click counter for vanilla js</h1>
+    <hr><br>
+    <span>total clicks: 0</span>
+    <br><br>
+    <button id="btn">click here!</button>
+</body>
+    <script>
+        let counter = 0;
+        const span = document.querySelector("span");
+        const button =document.querySelector("#btn");
+        function handleClick(){
+            console.log("btn clicked");
+            counter = counter +1;
+            span.innerText = `total clicks: ${counter}`
+        };
+        button.addEventListener("click",handleClick);
+    </script>
+</html>
