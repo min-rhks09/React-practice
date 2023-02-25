@@ -17,11 +17,18 @@
     <script>
         //id = "root"인 div 태그안에 span 생성
         const root = document.getElementById("root");
+        
         const span = React.createElement(
             "span", //span 태그생성
             {id: "span-sample",style:{color:"red"}}, //span에 id 및 style 부여 
+            null,
             "THIS IS A SAMPLE" //태그 내용 입력
-            ); 
-        ReactDOM.render(span, root);
+        );
+        
+        const button = React.createElement("button", null, "Click me"); //(html tag, property, content)
+
+        const container =React.createElement("div", null, [span, btn]);
+        
+        ReactDOM.render(button, root);
     </script>
 </html>

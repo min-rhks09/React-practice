@@ -23,3 +23,8 @@
 
 #2.2 
 - react (실제 react에서는 잘사용하지 않는 방식)
+
+- createElement(tag name, property(없으면 null), content(여러태그 렌더링을 하고싶을때는 array로 처리 []))
+    ex) const container =React.createElement("div", null, [span, btn]); div에 감싸져있는 span, button 생성
+
+- 
