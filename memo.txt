@@ -29,3 +29,8 @@
 
 - BABEL 
     - Uncaught SyntaxError: Unexpected token '<' 해결
+         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel"></script>
+
+- state
+
