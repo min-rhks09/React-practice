@@ -33,4 +33,32 @@
         <script type="text/babel"></script>
 
 - state
+ - 
+
+- rendering
+    -before
+     const root = document.getElementById("root");
+        
+        let counter = 0;
+        const countUp = () => {
+            counter = counter +1;
+            rendering(); //rendering
+        };
+        const rendering = () => {
+            ReactDOM.render(<Container />,root); //rerendering
+        }
+        
+        const Container = () => (
+            <div>
+                <h3>total clicks: {counter}</h3>
+                <button onClick={countUp}>Click here</button>
+            </div>);
+
+        rendering(); //rendering
+    - 최초 렌더링 후, 값이 바뀔때마다 렌더링 필요(렌더링 코드 반복 문제)
+    - useState 사용
+     - console 출력 시  [undefined, function] 형태를 가짐
+     - [데이터, 데이터 변경 시 사용할 함수]
+     - 구조분해할당
+     - modifier
 

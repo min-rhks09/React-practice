@@ -21,23 +21,22 @@
     <script type="text/babel">
         //id = "root"인 div 태그안에 span 생성
         const root = document.getElementById("root");
-        
-        let counter = 0;
-        const countUp = () => {
-            counter = counter +1;
-            rendering();
-        };
+
         const rendering = () => {
             ReactDOM.render(<Container />,root); //rerendering
-        }
+        };
         
-        const Container = () => (
+        function  Container() {
+            const [counter, setCounter] = React.useState(0);
+            const onClick = () => {setCounter(counter +1)};
+            return(
             <div>
                 <h3>total clicks: {counter}</h3>
-                <button onClick={countUp}>Click here</button>
-            </div>);
+                <button onClick={onClick}>Click here</button>
+            </div>
+            );
+        };
         // <div>Title Button</div>로 입력시 텍스트로 인식하기 떄문에 Title과 Button을 함수로 바꿔주고 태그형태로 입력
-
         rendering();
     </script>
 </html>
